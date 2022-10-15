@@ -1,11 +1,15 @@
-import React from 'react'
+import IndexHeader from "@/components/header/IndexHeader";
+import IndexProduct from "@/components/product/IndexProduct";
+
+import CartDetailsProvider from "@/context/useCartDetails";
 
 const App = () => {
-  return (
-    <>
-    <h1 className="text-center">Hola React y tailwind</h1>
-    </>
-  )
-}
+    return (
+        <CartDetailsProvider>
+            <IndexHeader />
+            <IndexProduct />
+        </CartDetailsProvider>
+    );
+};
 
 export default App;
